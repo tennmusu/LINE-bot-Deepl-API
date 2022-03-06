@@ -12,7 +12,7 @@ function doPost(e) {
     // メッセージ以外(スタンプや画像など)が送られてきた場合
     userMessage = '？？？';
   }
-  var deepl = 'https://api-free.deepl.com/v2/translate?auth_key=b1217795-e6f2-f3db-a41e-cadd2e9cf668:fx&text='+userMessage+'&target_lang=EN';
+  var deepl = 'https://api-free.deepl.com/v2/translate?auth_key='私のauth_key'&text='+userMessage+'&target_lang=EN';
   var response =UrlFetchApp.fetch(deepl).getContentText();
   var json = JSON.parse(response);
   userMessage=json["translations"][0]["text"];
